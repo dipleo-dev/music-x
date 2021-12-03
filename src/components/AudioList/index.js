@@ -7,7 +7,7 @@ const AudioList = (props) => {
         <li className="audio-ls-container">
           <div className="audio-ls-item flex">
             <div className="audio-img">
-              <img src="#" alt="" />
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
             </div>
             <div className="audio-info">
               <p>Song Title 1</p>
@@ -20,7 +20,7 @@ const AudioList = (props) => {
         <li className="audio-ls-container">
           <div className="audio-ls-item flex">
             <div className="audio-img ">
-              <img src="#" alt="" />
+              <img src="https://picsum.photos/id/237/200/300" alt="" />
             </div>
             <div className="audio-info">
               <p>Song Title 2</p>

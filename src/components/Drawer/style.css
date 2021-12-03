@@ -11,7 +11,7 @@
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   /* height: 50px; */
-  transition: height 0.5s ease-out;
+  transition: height 0.5s ease-in-out;
 }
 .slide-up-btn {
   width: 50px;
@@ -21,9 +21,9 @@
   margin: 0 auto;
 }
 .drawer.active {
-  height: calc(100% - 40px);
+  height: calc(100% - 90px);
 }
-.mini-player .artist-cover-img {
+.mini-player .audio-img {
   width: 40px;
   height: 40px;
   background: grey;
@@ -45,4 +45,56 @@ p {
 .mini-player-info {
   font-size: 14px;
   padding: 5px;
+}
+.audio-player-lg .audio-img-lg {
+  width: 300px;
+  height: 240px;
+  margin: 60px auto auto 10px;
+  position: relative;
+  align-content: center;
+}
+.audio-img-lg img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background: grey;
+}
+.audio-player-progress {
+  width: 100%;
+}
+.audio-player-progress input[type="range"] {
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+}
+h3 {
+  margin-top: 10px;
+}
+.audio-controls {
+  width: 180px;
+
+  margin: 40px auto 40px auto;
+}
+.audio-controls button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.prev-btn {
+  transform: scaleX(-1);
+}
+.audio-controls .play-pause-btn {
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  margin-left: 20px;
+  margin-right: 20px;
 }
