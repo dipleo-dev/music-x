@@ -12,7 +12,7 @@ const AudioList = (props) => {
             <div className="audio-info">
               <p>Song Title 1</p>
             </div>
-            <div className="like-btn flex">
+            <div className="like-btn flex justify-sb">
               <button>Like</button>
             </div>
           </div>
@@ -24,6 +24,9 @@ const AudioList = (props) => {
             </div>
             <div className="audio-info">
               <p>Song Title 2</p>
+            </div>
+            <div className="like-btn flex justify-sb">
+              <button>Like</button>
             </div>
           </div>
         </li>
