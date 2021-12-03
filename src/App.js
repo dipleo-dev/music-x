@@ -1,5 +1,6 @@
 import "./App.css";
 import AudioList from "./components/AudioList";
+import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App m-20">
       <Header />
       <AudioList />
+      <Drawer />
     </div>
   );
 }

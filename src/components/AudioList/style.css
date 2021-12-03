@@ -24,3 +24,14 @@
 ul {
   list-style-type: none;
 }
+.like-btn {
+  height: 30px;
+  padding: 10px;
+  margin-left: auto;
+}
+button {
+  width: 50px;
+}
+p {
+  padding: 5px;
+}
