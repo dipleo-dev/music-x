@@ -5,7 +5,7 @@ const Header = (props) => {
       <div className="logo">
         <img src={logo} alt="M" width="40" height="40" />
       </div>
-      <h2>Enjoy your Music</h2>
+      <h2 className="p-5">Enjoy your Music</h2>
     </header>
   );
 };

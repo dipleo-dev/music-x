@@ -1,0 +1,26 @@
+.audio-ls {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000;
+}
+.audio-ls-item .audio-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: grey;
+  overflow: hidden;
+  margin: 8px;
+}
+.audio-ls-item .audio-img img {
+  width: 40px;
+  height: 40px;
+}
+.audio-info {
+  padding: 10px;
+  font-size: 14px;
+}
+ul {
+  list-style-type: none;
+}
