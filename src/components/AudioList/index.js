@@ -1,27 +1,12 @@
 import "./style.css";
-import { useEffect, useState } from "react";
-import { baseUrl } from "../../config";
 
-const AudioList = (props) => {
-  const [audioList, setAudioList] = useState([]);
-  console.log(audioList, "audio-ls");
-  useEffect(() => {
-    fetch(`${baseUrl}/song/trending`)
-      .then((res) => res.json())
-      .then((jsonResp) => {
-        console.log({ jsonResp });
-        setAudioList(jsonResp);
-      })
-      .catch((error) => {
-        console.log({ error });
-      });
-  }, []);
-
+const AudioList = (audioList) => {
+  console.log(audioList.audioList, "audioList");
   return (
     <div className="audio-ls m-20">
       <ul>
-        {audioList.length ? (
-          audioList.map((item, index) => (
+        {audioList.audioList.length ? (
+          audioList.audioList.map((item, index) => (
             <li key={index} className="audio-ls-container">
               <div className="audio-ls-item flex">
                 <div className="audio-img">
