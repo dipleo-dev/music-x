@@ -7,7 +7,14 @@ import Header from "./components/Header";
 
 function App() {
   const [audioList, setAudioList] = useState([]);
+  const [trackIndex, setTrackIndex] = useState(-1);
+
   console.log(audioList, "audio-ls");
+
+  const onTrackSelect = (index) => {
+    setTrackIndex(index);
+  };
+
   useEffect(() => {
     fetch(`${baseUrl}/song/trending`)
       .then((res) => res.json())
@@ -19,12 +26,13 @@ function App() {
         console.log({ error });
       });
   }, []);
+
   return (
     <div className="App m-20">
       <Header />
 
-      <AudioList audioList={audioList} />
-      <Drawer />
+      <AudioList audioList={audioList} onTrackSelect={onTrackSelect} />
+      <Drawer trackIndex={trackIndex} audioList={audioList} />
     </div>
   );
 }
