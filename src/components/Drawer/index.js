@@ -87,8 +87,19 @@ const Drawer = ({ trackIndex, audioList }) => {
   console.log(audioList, "d-ad-l");
 
   return (
-    <div className={`drawer ${slideUp ? "active" : " "}`}>
-      <div className="slide-up-btn" onClick={() => setSlideUp(!slideUp)}></div>
+    <div
+      className={`drawer ${currentTrackIndex !== -1 ? "_h-md" : "_h-sm"} ${
+        slideUp ? "active" : " "
+      }`}
+    >
+      <div
+        className="slide-up-btn"
+        onClick={() => {
+          if (currentTrackIndex !== -1) {
+            setSlideUp(!slideUp);
+          }
+        }}
+      ></div>
       <div className="d-visilibity"></div>
       {slideUp && (
         <AudioPlayer

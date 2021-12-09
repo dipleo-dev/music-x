@@ -24,10 +24,17 @@
 ul {
   list-style-type: none;
 }
-.like-btn {
+.likeBtn {
   height: 30px;
-  padding: 10px;
+
+  padding: 0 10px;
+  font-size: 15px;
+  color: aliceblue;
+  background-color: transparent;
   margin-left: auto;
+  margin-top: 11px;
+  border-radius: 6px;
+  border: 0;
 }
 button {
   width: 40px;
