@@ -13,6 +13,7 @@ const Drawer = ({ trackIndex, audioList }) => {
     name = "",
     cover_image_path = "",
     music_file_path = "",
+    id = "",
   } = currentTrackIndex !== -1 ? audioList[currentTrackIndex] : {};
 
   const audioSrc = `${music_file_path}`;
@@ -112,6 +113,7 @@ const Drawer = ({ trackIndex, audioList }) => {
           onPlayPause={() => setIsPlaying(!isPlaying)}
           nextTrack={nextTrack}
           prevTrack={prevTrack}
+          id={id}
         />
       )}
       {!slideUp && (

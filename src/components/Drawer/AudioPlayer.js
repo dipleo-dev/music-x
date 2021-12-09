@@ -1,4 +1,5 @@
 import { PrevIcon, NextIcon, PlayIcon, pauseBlackIcon } from "../../assets";
+import { useState } from "react";
 
 const AudioPlayer = ({
   name,
@@ -10,9 +11,36 @@ const AudioPlayer = ({
   onPlayPause,
   prevTrack,
   nextTrack,
+  id,
 }) => {
   const currentProgress = (trackProgress / duration) * 100;
   const trackProgressStyling = `linear-gradient(to right, #9393ff ${currentProgress}%, #ffffff ${currentProgress}%)`;
+  const [liked, setLiked] = useState(false);
+  console.log(liked, "before ");
+  const handleLike = () => {
+    setLiked(!liked);
+    console.log(liked, "after click");
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+    const urlencoded = new URLSearchParams();
+    urlencoded.append("id", id);
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: urlencoded,
+      redirect: "follow",
+    };
+
+    fetch(
+      "https://api-stg.jam-community.com/interact/like?apikey=___agAFTxkmMIWsmN9zOpM_6l2SkZPPy21LGRlxhYD8",
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
+  };
 
   return (
     <div className="audio-player-lg">
@@ -23,7 +51,12 @@ const AudioPlayer = ({
       <div className="audio-info flex">
         <h3>{name}</h3>
         <div className="like-btn flex justify-sb">
-          <button>Like</button>
+          <button
+            className={`heart-icon ${liked ? "liked" : " "}`}
+            onClick={handleLike}
+          >
+            <i class="fa fa-heart"></i>
+          </button>
         </div>
       </div>
 

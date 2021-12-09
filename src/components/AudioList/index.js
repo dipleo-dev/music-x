@@ -1,5 +1,5 @@
 import "./style.css";
-import { NextIcon } from "../../assets";
+
 const AudioList = ({ audioList, onTrackSelect }) => {
   console.log(audioList, "audioList");
 
@@ -22,7 +22,7 @@ const AudioList = ({ audioList, onTrackSelect }) => {
                   <p>{item.name}</p>
                 </div>
                 <button className="likeBtn">
-                  <i class="fa fa-heart">
+                  <i className="fa fa-heart">
                     <p>{item.likes}</p>
                   </i>
                 </button>
