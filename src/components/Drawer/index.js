@@ -49,7 +49,6 @@ const Drawer = ({ trackIndex, audioList }) => {
     }
   };
   useEffect(() => {
-    console.log(audioSrc, "audiosrc");
     clearInterval(intervalRef.current);
     setCurrentTrackIndex(trackIndex);
   }, [trackIndex]);
@@ -67,7 +66,7 @@ const Drawer = ({ trackIndex, audioList }) => {
       // start progress of the audio
       startTimer();
     }
-  }, [currentTrackIndex]);
+  }, [currentTrackIndex, audioSrc]);
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
@@ -77,15 +76,6 @@ const Drawer = ({ trackIndex, audioList }) => {
       clearInterval(intervalRef.current);
     }
   }, [isPlaying]);
-
-  console.log(
-    currentTrackIndex,
-    music_file_path,
-    cover_image_path,
-    name,
-    "cr track Index"
-  );
-  console.log(audioList, "d-ad-l");
 
   return (
     <div

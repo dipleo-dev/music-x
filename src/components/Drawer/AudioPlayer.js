@@ -16,10 +16,10 @@ const AudioPlayer = ({
   const currentProgress = (trackProgress / duration) * 100;
   const trackProgressStyling = `linear-gradient(to right, #9393ff ${currentProgress}%, #ffffff ${currentProgress}%)`;
   const [liked, setLiked] = useState(false);
-  console.log(liked, "before ");
+
   const handleLike = () => {
     setLiked(!liked);
-    console.log(liked, "after click");
+
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 

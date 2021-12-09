@@ -1,8 +1,6 @@
 import "./style.css";
 
 const AudioList = ({ audioList, onTrackSelect }) => {
-  console.log(audioList, "audioList");
-
   return (
     <div className="audio-ls m-20">
       <ul>

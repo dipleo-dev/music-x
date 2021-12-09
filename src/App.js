@@ -9,8 +9,6 @@ function App() {
   const [audioList, setAudioList] = useState([]);
   const [trackIndex, setTrackIndex] = useState(-1);
 
-  console.log(audioList, "audio-ls");
-
   const onTrackSelect = (index) => {
     setTrackIndex(index);
   };
