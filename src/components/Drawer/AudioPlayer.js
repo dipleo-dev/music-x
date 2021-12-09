@@ -1,5 +1,6 @@
 import { PrevIcon, NextIcon, PlayIcon, pauseBlackIcon } from "../../assets";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const AudioPlayer = ({
   name,
@@ -16,7 +17,7 @@ const AudioPlayer = ({
   const currentProgress = (trackProgress / duration) * 100;
   const trackProgressStyling = `linear-gradient(to right, #9393ff ${currentProgress}%, #ffffff ${currentProgress}%)`;
   const [liked, setLiked] = useState(false);
-
+  console.log(id);
   const handleLike = () => {
     setLiked(!liked);
 
@@ -41,6 +42,9 @@ const AudioPlayer = ({
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
   };
+  useEffect(() => {
+    setLiked(false);
+  }, [id]);
 
   return (
     <div className="audio-player-lg">
