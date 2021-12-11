@@ -19,7 +19,7 @@ const AudioList = ({ audioList, onTrackSelect }) => {
                   {/* <p>{item.id}</p> */}
                   <p>{item.name}</p>
                 </div>
-                <button className="likeBtn">
+                <button className="likeBtn" disabled>
                   <i className="fa fa-heart">
                     <p>{item.likes}</p>
                   </i>
